@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.player-score,
+.computer-score {
+    flex: 1;
+}
+
+.player-score h2,
+.computer-score h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.player-score p,
+.computer-score p {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #00ff88;
+    text-shadow: 0 0 10px #00ff88;
+}
+
+.vs {
+    margin: 0 20px;
+    font-size: 1.5em;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+#pongCanvas {
+    display: block;
+    background: #000;
+    border: 3px solid #00ff88;
+    border-radius: 5px;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+    cursor: none;
+}
+
+.instructions {
+    margin-top: 20px;
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.instructions p {
+    margin: 5px 0;
+}
+
+#gameStatus {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #00ff88;
+    font-size: 1em;
+    text-shadow: 0 0 10px #00ff88;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #pongCanvas {
+        width: 100%;
+        height: auto;
+    }
+
+    .instructions {
+        font-size: 0.75em;
+    }
+}
